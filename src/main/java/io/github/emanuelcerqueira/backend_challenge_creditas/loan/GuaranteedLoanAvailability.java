@@ -11,7 +11,7 @@ public class GuaranteedLoanAvailability implements LoanAvailability {
     }
 
     @Override
-    public boolean isLoanAvailableByLoanCriteria(LoanCriteria loanCriteria) {
+    public boolean isLoanAvailable(LoanCriteria loanCriteria) {
 
         if (loanCriteria.getIncome() <= 3000) {
             return isAgeLessThan30(loanCriteria) && isLocationSp(loanCriteria);

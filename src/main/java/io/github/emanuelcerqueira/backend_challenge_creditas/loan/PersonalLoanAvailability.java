@@ -10,7 +10,7 @@ public class PersonalLoanAvailability implements LoanAvailability {
     }
 
     @Override
-    public boolean isLoanAvailableByLoanCriteria(LoanCriteria loanCriteria) {
+    public boolean isLoanAvailable(LoanCriteria loanCriteria) {
         return true;
     }
 }

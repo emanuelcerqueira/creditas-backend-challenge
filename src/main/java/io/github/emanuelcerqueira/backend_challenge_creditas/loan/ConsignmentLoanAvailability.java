@@ -11,7 +11,7 @@ public class ConsignmentLoanAvailability implements LoanAvailability {
     }
 
     @Override
-    public boolean isLoanAvailableByLoanCriteria(LoanCriteria loanCriteria) {
+    public boolean isLoanAvailable(LoanCriteria loanCriteria) {
         return loanCriteria.getIncome() >= 5000;
     }
 
