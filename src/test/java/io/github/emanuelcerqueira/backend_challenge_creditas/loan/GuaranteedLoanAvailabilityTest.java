@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GuaranteedLoanAvailabilityTest {
 
     @Test
-    void getLoan_whenCreated_thenLoanMustBePersonalWith4PercentTaxes() {
+    void getLoan_whenCreated_thenLoanMustBePersonalWith3PercentTaxes() {
         LoanAvailability consignmentLoanAvailability = new GuaranteedLoanAvailability();
         assertEquals(consignmentLoanAvailability.getLoan().getLoanType(), LoanType.GUARANTEED,
                 "Loan type must be guaranteed");
