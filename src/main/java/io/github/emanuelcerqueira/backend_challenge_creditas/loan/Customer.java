@@ -11,6 +11,14 @@ public class Customer implements LoanCriteria {
     private String location;
     private int income;
 
+    public Customer(String name, String cpf, int age, String location, int income) {
+        this.name = name;
+        this.cpf = cpf;
+        this.age = age;
+        this.location = location;
+        this.income = income;
+    }
+
     public Customer() {
     }
 

@@ -14,11 +14,11 @@ public class LoanService {
         this.loanAvailabilities = loanAvailabilities;
     }
 
-    public Set<LoanType> findAvailableLoanTypesByLoanCriteria(LoanCriteria loanCriteria) {
+    public Set<Loan> findAvailableLoanTypesByLoanCriteria(LoanCriteria loanCriteria) {
 
         return loanAvailabilities.stream()
                 .filter(loanAvailability -> loanAvailability.isLoanAvailable(loanCriteria))
-                .map(LoanAvailability::getLoanType)
+                .map(LoanAvailability::getLoan)
                 .collect(Collectors.toSet());
     }
 

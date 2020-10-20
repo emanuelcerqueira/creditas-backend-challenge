@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 public class ConsignmentLoanAvailability implements LoanAvailability {
 
     @Override
-    public LoanType getLoanType() {
-        return LoanType.CONSIGNMENT;
+    public Loan getLoan() {
+        return new Loan(LoanType.CONSIGNMENT, 2);
     }
 
     @Override

@@ -4,19 +4,19 @@ import java.util.Set;
 
 public class CustomerLoanTypesAvailability {
 
-    private final Customer customer;
-    private final Set<LoanType> availableLoanTypes;
+    private String customer;
+    private Set<Loan> availableLoans;
 
-    public CustomerLoanTypesAvailability(Customer customer, Set<LoanType> availableLoanTypes) {
-        this.customer = customer;
-        this.availableLoanTypes = availableLoanTypes;
+    public CustomerLoanTypesAvailability(Customer customer, Set<Loan> availableLoanTypes) {
+        this.customer = customer.getName();
+        this.availableLoans = availableLoanTypes;
     }
 
     public String getCustomer() {
-        return customer.getName();
+        return customer;
     }
 
-    public Set<LoanType> getLoans() {
-        return availableLoanTypes;
+    public Set<Loan> getLoans() {
+        return availableLoans;
     }
 }

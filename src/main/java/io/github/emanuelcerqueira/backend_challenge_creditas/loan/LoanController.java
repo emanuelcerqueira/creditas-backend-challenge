@@ -18,7 +18,7 @@ public class LoanController {
 
     @PostMapping(value = "/api/loan/availability")
     public ResponseEntity<CustomerLoanTypesAvailability> findAvailableLoanTypesByCustomer(@RequestBody Customer customer) {
-        Set<LoanType> availableLoanTypes = loanService.findAvailableLoanTypesByLoanCriteria(customer);
+        Set<Loan> availableLoanTypes = loanService.findAvailableLoanTypesByLoanCriteria(customer);
         return ResponseEntity.ok().body(new CustomerLoanTypesAvailability(customer, availableLoanTypes));
     }
 }

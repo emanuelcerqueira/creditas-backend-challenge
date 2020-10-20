@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 public class GuaranteedLoanAvailability implements LoanAvailability {
 
     @Override
-    public LoanType getLoanType() {
-        return LoanType.GUARANTEED;
+    public Loan getLoan() {
+        return new Loan(LoanType.GUARANTEED, 3);
     }
 
     @Override
@@ -19,7 +19,7 @@ public class GuaranteedLoanAvailability implements LoanAvailability {
         else if (loanCriteria.getIncome() > 3000 && loanCriteria.getIncome() <= 5000) {
             return isLocationSp(loanCriteria);
         }
-        else  if (loanCriteria.getIncome() >= 5000) {
+        else  if (loanCriteria.getIncome() > 5000) {
             return isAgeLessThan30(loanCriteria);
         }
         return false;
